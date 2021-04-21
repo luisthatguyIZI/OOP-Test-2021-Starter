@@ -19,19 +19,26 @@ public class ScoreDisplay extends PApplet
 
 	void loadScore()
 	{
-		for(int i=0; i<8;i++)
-		{	
+		for(int i=0;i<8;i++)
+		{
 			Note n= new Note();
 			notes.add(n);
+
 		}
+		
 	}
+	void printScore()
+	{
+		println(score);
+	}
+
 	void drawGrid()
     {
         float border = 0.1f * width;
-        for(int i = 0 ; i <=5 ; i ++)
+        for(int i = 1 ; i <=5 ; i ++)
         {
-            float x = map(i, 0, 5, border, width - border);
-            float y = map(i, 0, 5, border, height - border);
+            float x = map(i, 1, 5, border, width - border);
+            float y = map(i, 1, 5, border, height - border);
             stroke(0, 0, 0);
             line(border, y, width - border, y);
            
@@ -49,7 +56,7 @@ public class ScoreDisplay extends PApplet
 
 	public void setup() 
 	{
-		
+		printScore();
 	}
 
 	public void draw()
@@ -62,6 +69,28 @@ public class ScoreDisplay extends PApplet
 
 	void drawNotes()
 	{
+		//1
+		strokeWeight(3);
+		fill(0,0,0);
+        ellipse(125, 425, 50, 50);
+        stroke(0,0,0);
+		line(150,430,150,250);
+		line(150,250,190,300);
+		
+		//2
+		fill(0,0,0);
+        ellipse(240, 400, 50, 50);
+        stroke(0,0,0);
+		line(150,430,150,250);
+		line(150,250,190,300);
+
+		//3
+		fill(0,0,0);
+        ellipse(340, 360, 50, 50);
+
+		//4
+		fill(0,0,0);
+        ellipse(440, 320, 50, 50);
 	}
 
 

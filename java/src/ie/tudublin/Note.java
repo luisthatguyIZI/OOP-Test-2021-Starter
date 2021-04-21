@@ -10,21 +10,16 @@ public class Note{
     
 
     //Constructor
-    public Note() {
+    public Note(char note, int duration) {
         this.note = note;
         this.duration = duration;
-    }
-    public void render(PApplet pa)
-    {
-        float border = pa.width * 0.1f;
-        float x = PApplet.map(x, -5, 5, border, pa.width - border);
-        float y = PApplet.map(y, -5, 5, border, pa.width - border);
     }
 
     //Get & Set
     public char getNote() {
         return note;
     }
+    
     public void setNote(char note) {
         this.note = note;
     }
